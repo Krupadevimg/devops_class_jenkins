@@ -23,3 +23,4 @@ node {
 		sh("docker rmi ${dockerimagename}:latest -f")
    }
 }
+}
