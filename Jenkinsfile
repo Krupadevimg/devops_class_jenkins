@@ -1,7 +1,7 @@
 node {
 	def application = "myproject"
 	def dockerimagename = "myprojectimg"
-	def dockerhubaccountid = "dockerhubaccountid"
+	def dockerhubaccountid = "krupadevi"
 	stage('Clone repository') {
 		checkout scm
 	}
@@ -10,7 +10,7 @@ node {
 		app = docker.build("${dockerimagename}:${BUILD_NUMBER}")
 	}
         stage('Push image') {
-		withDockerRegistry([ credentialsId: "dockerHub", url: "" ]) {
+		withDockerRegistry([ credentialsId: "dockerhubaccountid", url: "" ]) {
 		app.push()
 		app.push("latest")
 	}
