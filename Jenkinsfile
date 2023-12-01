@@ -1,5 +1,5 @@
 node {
-	def application = "mydevopsprojectimg"
+	def application = "krupaprojectimg"
 	def dockerhubaccountid = "krupadevi"
 	stage('Clone repository') {
 		checkout scm
